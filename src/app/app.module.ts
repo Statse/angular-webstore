@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { GraphqlModule } from './modules/graphql.module';
 import { ProductsComponent } from './pages/products/products.component';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { ProductsComponent } from './pages/products/products.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GraphqlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
