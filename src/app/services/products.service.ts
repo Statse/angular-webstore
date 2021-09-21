@@ -1,42 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../types/product';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
+
+const httpOptions = {
+    header: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  apiUrl: string = "https://fakestoreapi.com/products"
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
-  getProducts(): Product[]{
-
-  let products = [
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      rating: {
-        rate: 3.9,
-        count: 120
-      }
-    },
-    {
-      id: 2,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      rating: {
-        rate: 3.9,
-        count: 120
-      }
-    }
-  ]
-
-    return products
+  getProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(this.apiUrl);
   }
 }

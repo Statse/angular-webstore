@@ -8,6 +8,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './component/product/product.component';
 import { ButtonComponent } from './component/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ButtonComponent } from './component/button/button.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
