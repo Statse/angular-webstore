@@ -1,0 +1,11 @@
+.product-card {
+    width: auto;
+    border: 2px solid black;
+    box-shadow: black 2px;
+    padding: 5rem 3rem;
+    margin: 5rem;
+    img {
+        max-width: 250px;
+        height: 100%;
+    }
+}
