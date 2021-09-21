@@ -1,5 +1,6 @@
 <div class="product-card">
     <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Example product"/>
-    <h3>Product title</h3>
-    <app-button (btnClick)="action()"></app-button>
+    <h3>{{product.title}}</h3>
+    <span>{{product.price}}</span>
+    <app-button (btnClick)="action(product)"></app-button>
 </div>

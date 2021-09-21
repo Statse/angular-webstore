@@ -14,8 +14,9 @@ export class ProductComponent implements OnInit {
     console.log(this.product)
   }
 
-  action():void{
-    alert("stuff happens")
+  action(product: Product):void{
+    alert("Product id is " + product.id)
+    console.log(product)
   }
 
 }

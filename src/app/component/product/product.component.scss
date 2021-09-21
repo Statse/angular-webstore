@@ -1,5 +1,9 @@
 .product-card {
     width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
     box-shadow: black 2px;
     padding: 3rem 3rem;
