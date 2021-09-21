@@ -12,4 +12,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  action():void{
+    alert("stuff happens")
+  }
+
 }
