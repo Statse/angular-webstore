@@ -1,6 +1,8 @@
 <div class="product-card">
     <img src="{{product.image}}" alt="Example product"/>
-    <h3>{{product.title}}</h3>
-    <span>{{product.price}}</span>
-    <app-button (btnClick)="action(product)"></app-button>
+    <div class="product-info">
+        <h3>{{product.title}}</h3>
+        <span class="label">{{product.price}}€</span>
+    </div>
+    <!-- <app-button (btnClick)="action(product)"></app-button> -->
 </div>
