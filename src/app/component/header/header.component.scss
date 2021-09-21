@@ -1,5 +1,19 @@
 header {
     min-height: 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 3px solid black;
+    .basket {
+        font-size: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .menu {
+        list-style-type: none;
+        display: flex;
+        li {
+            padding: 0 1rem;
+        }
+    }
 }
